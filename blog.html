@@ -1,0 +1,14 @@
+--- 
+layout: page 
+title: Blog 
+permalink: /blog 
+---
+
+{% for post in site.posts limit:3 %}
+<div class="post">
+  <div class="posttitle"><a href="{{ post.url }}">{{ post.title }}</a></div>
+  <div class="date">{{ post.date | date: "%A, %B %d, %Y" }}</div>
+  {{ post.content }}
+</div>
+{% endfor %}
+<div class="subtitle"><a href="/blog.html">All blog posts</a></div>
